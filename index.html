@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link
+            rel="stylesheet"
+            href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+        <title>Vite App</title>
+    </head>
+    <body>
+        <header class="sticky z-50 top-0 bg-white w-full">
+            <nav
+                class="w-[90%] mx-auto border-b-2 flex justify-between items-center h-20">
+                <h1>
+                    <a href="#" class="text-gray-700 text-2xl font-bold"
+                        >DeusStore</a
+                    >
+                </h1>
+
+                <ul class="flex gap-8 text-gray-800 text-xl font-normal">
+                    <li>
+                        <a
+                            href="#"
+                            class="hover:border-b-2 border-[#5046e5] transition-colors"
+                            >Women</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="hover:border-b-2 border-[#5046e5] transition-colors"
+                            >Men</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="hover:border-b-2 border-[#5046e5] transition-colors"
+                            >Company</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="hover:border-b-2 border-[#5046e5] transition-colors"
+                            >Store</a
+                        >
+                    </li>
+                </ul>
+
+                <div class="flex bg-blue gap-4 w-96 justify-end items-center">
+                    <div
+                        class="icons flex items-center gap-3 text-2xl text-gray-500">
+                        <div
+                            class="border w-auto rounded-full group focus:rounded-lg flex text-center items-center justify-center p-2 bg-gray-100 transition">
+                            <input
+                                type="text"
+                                placeholder="Search"
+                                class="outline-none w-0 text-center group-hover:w-52 placeholder:text-gray-500 text-sm placeholder:font-normal placeholder:text-base placeholder:text-left focus:w-52 transition-all placeholder:py-8 group-hover:pl-2 focus:pl-2 bg-transparent" />
+                            <i
+                                class="uil uil-search cursor-pointer rounded-full text-center leading-none"></i>
+                        </div>
+
+                        <i
+                            id="abrir-carrito"
+                            class="uil uil-shopping-bag cursor-pointer p-2"></i>
+                        <i class="uil uil-heart-alt cursor-pointer"></i>
+                    </div>
+
+                    <div class="perfil">
+                        <img
+                            class="w-10 h-10 object-cover rounded-full border"
+                            src="/src/assets/img/perfil.webp"
+                            alt="" />
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="grid grid-cols-4 w-[90%] mx-auto relative">
+            <aside class="col-span-1 my-8 px-12 h-[65vh]">
+                <h1 class="text-2xl text-gray-800 font-medium">New Arrivals</h1>
+
+                <div class="categorias text-lg text-gray-800">
+                    <div
+                        class="categoria-productos flex flex-col gap-6 mt-9 py-8 border-b">
+                        <span>Totes</span>
+                        <span>Backpacks</span>
+                        <span>Travel Bags</span>
+                        <span>Hip Bags</span>
+                        <span>Laptop Sleeves</span>
+                    </div>
+
+                    <div class="colors py-8 border-b">
+                        <div class="flex justify-between mb-3">
+                            <span>Color</span>
+                            <span
+                                id="colores-simbolo"
+                                class="cursor-pointer w-4 h-4 text-gray-500 "
+                                ><i class="uil uil-plus"></i></span
+                            >
+                        </div>
+
+                        <div
+                            id="colores"
+                            class="colores hidden flex-col gap-2 text-gray-500 transition-all">
+                            <div class="text-sm flex gap-3">
+                                <input type="checkbox" name="" id="" />
+                                <label for="">White</label>
+                            </div>
+
+                            <div class="text-sm flex gap-3">
+                                <input type="checkbox" name="" id="" />
+                                <label for="">Beige</label>
+                            </div>
+
+                            <div class="text-sm flex gap-3">
+                                <input type="checkbox" name="" id="" />
+                                <label for="">Blue</label>
+                            </div>
+
+                            <div class="text-sm flex gap-3">
+                                <input type="checkbox" name="" id="" />
+                                <label for="">Brown</label>
+                            </div>
+                            <div class="text-sm flex gap-3">
+                                <input type="checkbox" name="" id="" />
+                                <label for="">Green</label>
+                            </div>
+                            <div class="text-sm flex gap-3">
+                                <input type="checkbox" name="" id="" />
+                                <label for="">Purple</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- --------------------------------------------------------- -->
+
+                    <div class="Category py-8 border-b">
+                        <div class="flex justify-between mb-3">
+                            <span>Category</span>
+                            <span
+                                id="categorias-simbolo"
+                                class="cursor-pointer w-4 h-4 text-gray-500 "
+                                ><i class="uil uil-plus"></i></span
+                            >
+                        </div>
+
+                        <div
+                            id="categorias"
+                            class="text-gray-500 transition-all hidden flex-col gap-2">
+                            <div class="text-sm flex gap-3">
+                                <input type="checkbox" name="" id="" />
+                                <label for="">All New Arrivals</label>
+                            </div>
+                            <div class="text-sm flex gap-3">
+                                <input type="checkbox" name="" id="" />
+                                <label for="">Tees</label>
+                            </div>
+                            <div class="text-sm flex gap-3">
+                                <input type="checkbox" name="" id="" />
+                                <label for="">Crewnecks</label>
+                            </div>
+                            <div class="text-sm flex gap-3">
+                                <input type="checkbox" name="" id="" />
+                                <label for="">Sweatshirts</label>
+                            </div>
+                            <div class="text-sm flex gap-3">
+                                <input type="checkbox" name="" id="" />
+                                <label for="">Pants & Shorts</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- --------------------------------------------------------- -->
+
+                    <div class="Size py-8 border-b">
+                        <div class="flex justify-between mb-3">
+                            <span>Size</span>
+                            <span
+                                id="medidas-simbolo"
+                                class="cursor-pointer w-4 h-4 text-gray-500 "
+                                ><i class="uil uil-plus"></i></span
+                            >
+                        </div>
+
+                        <div
+                            id="medidas"
+                            class="text-gray-500 transition ease-linear delay-300 hidden flex-col gap-2">
+                            <div class="text-sm flex gap-3">
+                                <input type="checkbox" />
+                                <label for="">XS</label>
+                            </div>
+                            <div class="text-sm flex gap-3">
+                                <input type="checkbox" />
+                                <label for="">S</label>
+                            </div>
+                            <div class="text-sm flex gap-3">
+                                <input type="checkbox" />
+                                <label for="">M</label>
+                            </div>
+                            <div class="text-sm flex gap-3">
+                                <input type="checkbox" />
+                                <label for="">L</label>
+                            </div>
+                            <div class="text-sm flex gap-3">
+                                <input type="checkbox" />
+                                <label for="">XL</label>
+                            </div>
+                            <div class="text-sm flex gap-3">
+                                <input type="checkbox" />
+                                <label for="">2XL</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- --------------------------------------------------------- -->
+                </div>
+            </aside>
+
+            <main class="my-8 col-span-3">
+                <h2 class="text-2xl text-gray-800 font-medium">
+                    Los clientes también compraron
+                </h2>
+
+                <div
+                    class="contenedor-productos mt-10 flex mx-auto justify-evenly flex-wrap gap-4">
+                    <div class="producto w-60 mb-5">
+                        <img
+                            class="min-w-full rounded-md hover:opacity-80 transition-opacity"
+                            src="/src/assets/img/1.webp"
+                            alt="" />
+                        <div class="flex justify-between mt-1">
+                            <h3 class="text-sm text-gray-700">
+                                Camiseta básica
+                            </h3>
+                            <p class="text-sm font-medium text-gray-900">$35</p>
+                        </div>
+                        <p class="mt-1 text-sm text-gray-500">Negro</p>
+
+                        <button
+                            class="bg-gray-400 w-full py-2 mt-2 text-white text-base font-semibold hover:bg-gray-500">
+                            Add to bag
+                        </button>
+                    </div>
+                    <!-- ------------------------------------------------------------------ -->
+
+                    <div class="producto w-60">
+                        <img
+                            class="min-w-full rounded-md hover:opacity-80 transition-opacity"
+                            src="/src/assets/img/2.webp"
+                            alt="" />
+                        <div class="flex justify-between mt-1">
+                            <h3 class="text-sm text-gray-700">
+                                Camiseta básica
+                            </h3>
+                            <p class="text-sm font-medium text-gray-900">$35</p>
+                        </div>
+                        <p class="mt-1 text-sm text-gray-500">Álamo Blanco</p>
+                        <button
+                            class="bg-gray-400 w-full py-2 mt-2 text-white text-base font-semibold hover:bg-gray-500">
+                            Add to bag
+                        </button>
+                    </div>
+                    <!-- ------------------------------------------------------------------ -->
+
+                    <div class="producto w-60">
+                        <img
+                            class="min-w-full rounded-md hover:opacity-80 transition-opacity"
+                            src="/src/assets/img/3.webp"
+                            alt="" />
+                        <div class="flex justify-between mt-1">
+                            <h3 class="text-sm text-gray-700">
+                                Camiseta básica
+                            </h3>
+                            <p class="text-sm font-medium text-gray-900">$35</p>
+                        </div>
+                        <p class="mt-1 text-sm text-gray-500">Carbón</p>
+                        <button
+                            class="bg-gray-400 w-full py-2 mt-2 text-white text-base font-semibold hover:bg-gray-500">
+                            Add to bag
+                        </button>
+                    </div>
+                    <!-- ------------------------------------------------------------------ -->
+
+                    <div class="producto w-60">
+                        <img
+                            class="min-w-full rounded-md hover:opacity-80 transition-opacity"
+                            src="/src/assets/img/4.webp"
+                            alt="" />
+                        <div
+                            class="flex justify-between mt-1 hover:opacity-80 transition-opacity">
+                            <h3 class="text-sm text-gray-700">
+                                Camiseta básica
+                            </h3>
+                            <p class="text-sm font-medium text-gray-900">$35</p>
+                        </div>
+                        <p class="mt-1 text-sm text-gray-500">Negro</p>
+                        <button
+                            class="bg-gray-400 w-full py-2 mt-2 text-white text-base font-semibold hover:bg-gray-500">
+                            Add to bag
+                        </button>
+                    </div>
+                    <!-- ------------------------------------------------------------------ -->
+
+                    <div class="producto w-60">
+                        <img
+                            class="min-w-full rounded-md hover:opacity-80 transition-opacity"
+                            src="/src/assets/img/5.webp"
+                            alt="" />
+                        <div class="flex justify-between mt-1">
+                            <h3 class="text-sm text-gray-700">
+                                Camiseta de arte
+                            </h3>
+                            <p class="text-sm font-medium text-gray-900">$35</p>
+                        </div>
+                        <p class="mt-1 text-sm text-gray-500">Puntos ISO</p>
+                        <button
+                            class="bg-gray-400 w-full py-2 mt-2 text-white text-base font-semibold hover:bg-gray-500">
+                            Add to bag
+                        </button>
+                    </div>
+                    <!-- ------------------------------------------------------------------ -->
+
+                    <div class="producto w-60">
+                        <img
+                            class="min-w-full rounded-md hover:opacity-80 transition-opacity"
+                            src="/src/assets/img/6.webp"
+                            alt="" />
+                        <div class="flex justify-between mt-1">
+                            <h3 class="text-sm text-gray-700">
+                                Camiseta básica
+                            </h3>
+                            <p class="text-sm font-medium text-gray-900">$35</p>
+                        </div>
+                        <p class="mt-1 text-sm text-gray-500">Negro</p>
+                        <button
+                            class="bg-gray-400 w-full py-2 mt-2 text-white text-base font-semibold hover:bg-gray-500">
+                            Add to bag
+                        </button>
+                    </div>
+                    <!-- ------------------------------------------------------------------ -->
+
+                    <div class="producto w-60">
+                        <img
+                            class="min-w-full rounded-md"
+                            src="/src/assets/img/7.webp"
+                            alt="" />
+                        <div class="flex justify-between mt-1">
+                            <h3 class="text-sm text-gray-700">
+                                Camiseta básica
+                            </h3>
+                            <p class="text-sm font-medium text-gray-900">$35</p>
+                        </div>
+                        <p class="mt-1 text-sm text-gray-500">Álamo Blanco</p>
+                        <button
+                            class="bg-gray-400 w-full py-2 mt-2 text-white text-base font-semibold hover:bg-gray-500">
+                            Add to bag
+                        </button>
+                    </div>
+                    <!-- ------------------------------------------------------------------ -->
+
+                    <div class="producto w-60 rounded-md mb-5">
+                        <img
+                            class="min-w-full"
+                            src="/src/assets/img/8.webp"
+                            alt="" />
+                        <div class="flex justify-between mt-1">
+                            <h3 class="text-sm text-gray-700">
+                                Camiseta básica
+                            </h3>
+                            <p class="text-sm font-medium text-gray-900">$35</p>
+                        </div>
+                        <p class="mt-1 text-sm text-gray-500">Carbón</p>
+                        <button
+                            class="bg-gray-400 w-full py-2 mt-2 text-white text-base font-semibold hover:bg-gray-500">
+                            Add to bag
+                        </button>
+                    </div>
+                    <!-- ------------------------------------------------------------------ -->
+
+                    <div class="producto w-60 rounded-md">
+                        <img
+                            class="min-w-full"
+                            src="/src/assets/img/9.webp"
+                            alt="" />
+                        <div class="flex justify-between mt-1">
+                            <h3 class="text-sm text-gray-700">
+                                Camiseta básica
+                            </h3>
+                            <p class="text-sm font-medium text-gray-900">$35</p>
+                        </div>
+                        <p class="mt-1 text-sm text-gray-500">Negro</p>
+                        <button
+                            class="bg-gray-400 w-full py-2 mt-2 text-white text-base font-semibold hover:bg-gray-500">
+                            Add to bag
+                        </button>
+                    </div>
+                    <!-- ------------------------------------------------------------------ -->
+
+                    <div class="producto w-60 rounded-md">
+                        <img
+                            class="min-w-full"
+                            src="/src/assets/img/10.webp"
+                            alt="" />
+                        <div class="flex justify-between mt-1">
+                            <h3 class="text-sm text-gray-700">
+                                Camiseta de arte
+                            </h3>
+                            <p class="text-sm font-medium text-gray-900">$35</p>
+                        </div>
+                        <p class="mt-1 text-sm text-gray-500">Puntos ISO</p>
+                        <button
+                            class="bg-gray-400 w-full py-2 mt-2 text-white text-base font-semibold hover:bg-gray-500">
+                            Add to bag
+                        </button>
+                    </div>
+                    <!-- ------------------------------------------------------------------ -->
+
+                    <div class="producto w-60 rounded-md">
+                        <img
+                            class="min-w-full"
+                            src="/src/assets/img/11.webp"
+                            alt="" />
+                        <div class="flex justify-between mt-1">
+                            <h3 class="text-sm text-gray-700">
+                                Camiseta de arte
+                            </h3>
+                            <p class="text-sm font-medium text-gray-900">$35</p>
+                        </div>
+                        <p class="mt-1 text-sm text-gray-500">Puntos ISO</p>
+                        <button
+                            class="bg-gray-400 w-full py-2 mt-2 text-white text-base font-semibold hover:bg-gray-500">
+                            Add to bag
+                        </button>
+                    </div>
+                    <!-- ------------------------------------------------------------------ -->
+
+                    <div class="producto w-60 rounded-md mb-5">
+                        <img
+                            class="min-w-full"
+                            src="/src/assets/img/12.webp"
+                            alt="" />
+                        <div class="flex justify-between mt-1">
+                            <h3 class="text-sm text-gray-700">
+                                Camiseta de arte
+                            </h3>
+                            <p class="text-sm font-medium text-gray-900">$35</p>
+                        </div>
+                        <p class="mt-1 text-sm text-gray-500">Puntos ISO</p>
+                        <button
+                            class="bg-gray-400 w-full py-2 mt-2 text-white text-base font-semibold hover:bg-gray-500">
+                            Add to bag
+                        </button>
+                    </div>
+                    <!-- ------------------------------------------------------------------ -->
+
+                    <div class="producto w-60 rounded-md mb-5">
+                        <img
+                            class="min-w-full"
+                            src="/src/assets/img/13.webp"
+                            alt="" />
+                        <div class="flex justify-between mt-1">
+                            <h3 class="text-sm text-gray-700">
+                                Camiseta de arte
+                            </h3>
+                            <p class="text-sm font-medium text-gray-900">$35</p>
+                        </div>
+                        <p class="mt-1 text-sm text-gray-500">Puntos ISO</p>
+                        <button
+                            class="bg-gray-400 w-full py-2 mt-2 text-white text-base font-semibold hover:bg-gray-500">
+                            Add to bag
+                        </button>
+                    </div>
+                    <!-- ------------------------------------------------------------------ -->
+
+                    <div class="producto w-60 rounded-md mb-5">
+                        <img
+                            class="min-w-full"
+                            src="/src/assets/img/14.webp"
+                            alt="" />
+                        <div class="flex justify-between mt-1">
+                            <h3 class="text-sm text-gray-700">
+                                Camiseta de arte
+                            </h3>
+                            <p class="text-sm font-medium text-gray-900">$35</p>
+                        </div>
+                        <p class="mt-1 text-sm text-gray-500">Puntos ISO</p>
+                        <button
+                            class="bg-gray-400 w-full py-2 mt-2 text-white text-base font-semibold hover:bg-gray-500">
+                            Add to bag
+                        </button>
+                    </div>
+                    <!-- ------------------------------------------------------------------ -->
+
+                    <div class="producto w-60 rounded-md mb-5">
+                        <img
+                            class="min-w-full"
+                            src="/src/assets/img/15.webp"
+                            alt="" />
+                        <div class="flex justify-between mt-1">
+                            <h3 class="text-sm text-gray-700">
+                                Camiseta de arte
+                            </h3>
+                            <p class="text-sm font-medium text-gray-900">$35</p>
+                        </div>
+                        <p class="mt-1 text-sm text-gray-500">Puntos ISO</p>
+                        <button
+                            class="bg-gray-400 w-full py-2 mt-2 text-white text-base font-semibold hover:bg-gray-500">
+                            Add to bag
+                        </button>
+                    </div>
+                    <!-- ------------------------------------------------------------------ -->
+
+                    <div class="producto w-60 rounded-md mb-5">
+                        <img
+                            class="min-w-full"
+                            src="/src/assets/img/16.webp"
+                            alt="" />
+                        <div class="flex justify-between mt-1">
+                            <h3 class="text-sm text-gray-700">
+                                Camiseta de arte
+                            </h3>
+                            <p class="text-sm font-medium text-gray-900">$35</p>
+                        </div>
+                        <p class="mt-1 text-sm text-gray-500">Puntos ISO</p>
+                        <button
+                            class="bg-gray-400 w-full py-2 mt-2 text-white text-base font-semibold hover:bg-gray-500">
+                            Add to bag
+                        </button>
+                    </div>
+                    <!-- ------------------------------------------------------------------ -->
+
+                    <div class="producto w-60 rounded-md mb-5">
+                        <img
+                            class="min-w-full"
+                            src="/src/assets/img/17.webp"
+                            alt="" />
+                        <div class="flex justify-between mt-1">
+                            <h3 class="text-sm text-gray-700">
+                                Camiseta de arte
+                            </h3>
+                            <p class="text-sm font-medium text-gray-900">$35</p>
+                        </div>
+                        <p class="mt-1 text-sm text-gray-500">Puntos ISO</p>
+                        <button
+                            class="bg-gray-400 w-full py-2 mt-2 text-white text-base font-semibold hover:bg-gray-500">
+                            Add to bag
+                        </button>
+                    </div>
+                    <!-- ------------------------------------------------------------------ -->
+
+                    <div class="producto w-60 rounded-md mb-5">
+                        <img
+                            class="min-w-full"
+                            src="/src/assets/img/18.webp"
+                            alt="" />
+                        <div class="flex justify-between mt-1">
+                            <h3 class="text-sm text-gray-700">
+                                Camiseta de arte
+                            </h3>
+                            <p class="text-sm font-medium text-gray-900">$35</p>
+                        </div>
+                        <p class="mt-1 text-sm text-gray-500">Puntos ISO</p>
+                        <button
+                            class="bg-gray-400 w-full py-2 mt-2 text-white text-base font-semibold hover:bg-gray-500">
+                            Add to bag
+                        </button>
+                    </div>
+                    <!-- ------------------------------------------------------------------ -->
+
+                    <div class="producto w-60 rounded-md mb-5">
+                        <img
+                            class="min-w-full"
+                            src="/src/assets/img/19.webp"
+                            alt="" />
+                        <div class="flex justify-between mt-1">
+                            <h3 class="text-sm text-gray-700">
+                                Camiseta de arte
+                            </h3>
+                            <p class="text-sm font-medium text-gray-900">$35</p>
+                        </div>
+                        <p class="mt-1 text-sm text-gray-500">Puntos ISO</p>
+                        <button
+                            class="bg-gray-400 w-full py-2 mt-2 text-white text-base font-semibold hover:bg-gray-500">
+                            Add to bag
+                        </button>
+                    </div>
+                    <!-- ------------------------------------------------------------------ -->
+
+                    <div class="producto w-60 rounded-md mb-5">
+                        <img
+                            class="min-w-full"
+                            src="/src/assets/img/20.webp"
+                            alt="" />
+                        <div class="flex justify-between mt-1">
+                            <h3 class="text-sm text-gray-700">
+                                Camiseta de arte
+                            </h3>
+                            <p class="text-sm font-medium text-gray-900">$35</p>
+                        </div>
+                        <p class="mt-1 text-sm text-gray-500">Puntos ISO</p>
+                        <button
+                            class="bg-gray-400 w-full py-2 mt-2 text-white text-base font-semibold hover:bg-gray-500">
+                            Add to bag
+                        </button>
+                    </div>
+                    <!-- ------------------------------------------------------------------ -->
+                </div>
+            </main>
+        </div>
+
+        <div
+            id="menu-carrito"
+            class="w-screen min-h-screen fixed z-50 top-0  transition leading-none grid-cols-5 hidden ">
+            <div class="bg-black col-span-4 opacity-40"></div>
+
+            <div
+                class="bg-white col-span-1 col-start-5 p-6 pr-10 text-gray-500 ">
+                
+                
+                <div id="carro-translado" class="flex flex-col justify-between h-full transform translate-x-96 transition ease-in-out duration-700">
+                    
+                    <div>
+                        <div class="flex justify-between w-full">
+                            <p class="text-gray-800 font-medium">
+                                Shopping cart
+                            </p>
+                            <i
+                                id="cerrar-carrito"
+                                class="uil uil-multiply cursor-pointer"></i>
+                        </div>
+
+                        <!-- --------------------------------------------------------- -->
+
+                        <div class="productos">
+                            <div
+                                class="producto mt-6 flex justify-between border-b py-8">
+                                <img
+                                    src="./src/assets/img/1.webp"
+                                    alt="producto"
+                                    class="w-20 h-20 object-contain" />
+                                <div class="informacion flex flex-col gap-3">
+                                    <h3 class="text-gray-800">
+                                        Camiseta básica
+                                    </h3>
+                                    <p>Negro</p>
+                                    <span class="">Qty 1</span>
+                                </div>
+
+                                <div
+                                    class="flex flex-col justify-between items-end">
+                                    <p>$35</p>
+                                    <button class="text-blue-700 font-medium">
+                                        Remove
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div
+                                class="producto mt-6 flex justify-between border-b py-8">
+                                <img
+                                    src="./src/assets/img/2.webp"
+                                    alt="producto"
+                                    class="w-20 h-20 object-contain" />
+                                <div class="informacion flex flex-col gap-3">
+                                    <h3 class="text-gray-800">
+                                        Camiseta básica
+                                    </h3>
+                                    <p>Álamo Blanco</p>
+                                    <span class="">Qty 1</span>
+                                </div>
+
+                                <div
+                                    class="flex flex-col justify-between items-end">
+                                    <p>$35</p>
+                                    <button class="text-blue-700 font-medium">
+                                        Remove
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div
+                                class="producto mt-6 flex justify-between py-8">
+                                <img
+                                    src="./src/assets/img/3.webp"
+                                    alt="producto"
+                                    class="w-20 h-20 object-contain" />
+                                <div class="informacion flex flex-col gap-3">
+                                    <h3 class="text-gray-800">
+                                        Camiseta básica
+                                    </h3>
+                                    <p>Carbón</p>
+                                    <span class="">Qty 1</span>
+                                </div>
+
+                                <div
+                                    class="flex flex-col justify-between items-end">
+                                    <p>$35</p>
+                                    <button class="text-blue-700 font-medium">
+                                        Remove
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- --------------------------------------------------------- -->
+                    </div>
+
+                    <div class="subtotal border-t">
+                        <div class="flex justify-between py-6">
+                            <div>
+                                <p class="text-gray-800 font-medium">
+                                    Subtotal
+                                </p>
+                                <p class="text-sm">
+                                    Shipping and taxes calculated at checkout
+                                </p>
+                            </div>
+
+                            <span class="text-gray-800 font-medium">$105</span>
+                        </div>
+
+                        <button
+                            class="bg-blue-700 w-full py-3 rounded text-white">
+                            Checkout
+                        </button>
+                        <div class="pt-6 text-center">
+                            <span>or</span>
+                            <span class="text-blue-700"
+                                >Continue Shopping<i
+                                    class="uil uil-arrow-right"></i
+                            ></span>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+
+        <footer class="w-[90%] mx-auto grid grid-cols-4 px-10">
+            <div
+                class="col-span-3 col-start-2 border-t border-b flex items-center h-16 justify-between">
+                <div>
+                    <p class="text-gray-800 font-light">
+                        Showing 1 to 10 of 20 results
+                    </p>
+                </div>
+                <div class="flex gap-4">
+                    <button class="bg-white border rounded py-1 px-2 w-20">
+                        Previous
+                    </button>
+                    <button class="bg-white border rounded py-1 px-2 w-20">
+                        Next
+                    </button>
+                </div>
+            </div>
+
+            <div
+                class="col-span-3 col-start-2 flex py-16 justify-between h-80 my-2 text-gray-500">
+                <div class="flex flex-col gap-4">
+                    <h3 class="text-gray-900">Solutions</h3>
+                    <span>Marketing</span>
+                    <span>Analystics</span>
+                    <span>Commerce</span>
+                    <span>Insights</span>
+                </div>
+
+                <div class="flex flex-col gap-4">
+                    <h3 class="text-gray-900">Support</h3>
+                    <span>Pricing</span>
+                    <span>Documentation</span>
+                    <span>Guides</span>
+                    <span>Api Status</span>
+                </div>
+
+                <div class="flex flex-col gap-4">
+                    <h3 class="text-gray-900">Company</h3>
+                    <span>About</span>
+                    <span>Blog</span>
+                    <span>Jobs</span>
+                    <span>Press</span>
+                </div>
+
+                <div class="flex flex-col gap-4">
+                    <h3 class="text-gray-900">Legal</h3>
+                    <span>Claim</span>
+                    <span>Privacy</span>
+                    <span>Terms</span>
+                    <span>Partners</span>
+                </div>
+
+                <div
+                    class="flex flex-col gap-4 text-gray-900 justify-start h-32">
+                    <h3>Language & Currency</h3>
+                    <select
+                        name="AUD"
+                        id="aud"
+                        class="w-28 bg-gray-400 rounded px-2 py-1 text-white">
+                        <option value="AUD">English</option>
+                    </select>
+                    <select
+                        name="AUD"
+                        id="aud"
+                        class="w-28 bg-gray-400 rounded px-2 py-1 text-white">
+                        <option value="AUD">AUD</option>
+                    </select>
+                </div>
+            </div>
+
+            <div
+                class="h-16 col-span-3 col-start-2 flex items-center justify-between border-b border-t py-12">
+                <div>
+                    <p class="text-gray-900">Subscribe to our newsletter</p>
+                    <p class="text-gray-500">
+                        The latest news, articles, and resources, sent to you
+                        inbox weekly
+                    </p>
+                </div>
+                <div class="flex gap-3">
+                    <input
+                        type="email"
+                        name=""
+                        id=""
+                        placeholder="Enter your email"
+                        class="rounded py-1 px-2 border" />
+                    <button
+                        type="submit"
+                        class="bg-gray-400 rounded px-2 py-1 text-white">
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+
+            <div
+                class="h-16 col-span-3 col-start-2 flex items-center justify-between py-12">
+                <p class="text-gray-500">
+                    © 2022 DeusStore, Inc All rights reserved.
+                </p>
+                <div class="flex gap-2 text-gray-500">
+                    <i class="uil uil-facebook"></i>
+                    <i class="uil uil-instagram"></i>
+                    <i class="uil uil-twitter"></i>
+                    <i class="uil uil-github"></i>
+                    <i class="uil uil-dribbble"></i>
+                </div>
+            </div>
+        </footer>
+
+        <script src="/src/main.js"></script>
+    </body>
+</html>
